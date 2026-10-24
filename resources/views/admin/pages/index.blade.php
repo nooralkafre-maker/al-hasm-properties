@@ -1,0 +1,4 @@
+@extends('layouts.admin')
+@section('title',__('Website Pages'))
+@section('section_label',__('Website Pages'))
+@section('content')<div class="admin-heading"><div><h1>{{ __('Website Content Pages') }}</h1><p>{{ __('Edit bilingual informational and legal pages.') }}</p></div></div><div class="admin-panel"><div class="table-wrap"><table class="admin-table"><thead><tr><th>{{ __('Page') }}</th><th>{{ __('Slug') }}</th><th>{{ __('Published') }}</th><th>{{ __('Action') }}</th></tr></thead><tbody>@foreach($pages as $page)<tr><td><strong>{{ $page->title }}</strong></td><td>/page/{{ $page->slug }}</td><td><span class="pill {{ $page->published?'':'draft' }}">{{ $page->published?__('Yes'):__('No') }}</span></td><td><a class="action-link" href="{{ route('admin.pages.edit',$page) }}">{{ __('Edit Content') }}</a></td></tr>@endforeach</tbody></table></div></div>@endsection

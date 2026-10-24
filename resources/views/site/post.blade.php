@@ -1,0 +1,4 @@
+@extends('layouts.site')
+@section('title',$post->title)
+@section('description',\Illuminate\Support\Str::limit($post->excerpt,155))
+@section('content')<div class="page-hero"><div class="container"><span class="kicker">{{ __('MARKET INSIGHTS') }}</span><h1 style="max-width:850px">{{ $post->title }}</h1><div class="breadcrumbs"><a href="{{ route('blog.index') }}">{{ __('Insights') }}</a> / {{ optional($post->published_at)->format('M d, Y') }}</div></div></div><section class="section"><div class="container" style="max-width:900px"><img class="article-cover" src="{{ $post->image_url }}" alt="{{ $post->title }}"><div class="prose" style="margin-top:37px">{{ $post->body }}</div><a class="btn btn-light" href="{{ route('blog.index') }}" style="margin-top:35px">← {{ __('All Articles') }}</a></div></section>@endsection

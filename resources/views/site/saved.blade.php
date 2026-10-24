@@ -1,0 +1,3 @@
+@extends('layouts.site')
+@section('title',__('Saved Properties'))
+@section('content')<div class="page-hero"><div class="container"><span class="kicker">{{ __('YOUR SHORTLIST') }}</span><h1>{{ __('Saved Properties') }}</h1></div></div><section class="section"><div class="container"><div class="property-grid">@forelse($properties as $property)@include('partials.property-card')@empty<div class="empty-state" style="grid-column:1/-1"><h3>{{ __('No saved properties yet.') }}</h3><a href="{{ route('properties.index') }}" class="btn btn-primary">{{ __('Explore Properties') }}</a></div>@endforelse</div></div></section>@endsection

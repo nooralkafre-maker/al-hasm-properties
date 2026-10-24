@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+# Replace the URL below with your production domain when deployed.
+# Sitemap: https://YOUR-DOMAIN/sitemap.xml

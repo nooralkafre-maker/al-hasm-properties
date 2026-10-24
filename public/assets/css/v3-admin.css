@@ -1,0 +1,19 @@
+/* AL HASM Properties · Laravel admin premium polish v3 (isolated to admin layout) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Cairo:wght@400;500;700&display=swap');
+.admin-body{--green:#176545;--deep:#0e2c22;--line:#e3ece6;background:#f5f8f6;font-family:'Manrope','DM Sans',Arial,sans-serif;color:#153d2b}
+html[dir=rtl] .admin-body{font-family:'Cairo',sans-serif}
+.admin-sidebar{background:#0a291f!important;color:#d6e7d9!important;width:272px!important;box-shadow:10px 0 55px rgba(0,0,0,.025)!important}
+.admin-sidebar .brand{padding:21px 15px 34px!important;border-bottom:1px solid rgba(255,255,255,.12)!important;margin-bottom:18px!important}
+.admin-sidebar .brand-name{color:white!important}.admin-sidebar .brand-name b{color:#80d19e!important}.admin-sidebar .brand-sub{color:#a2bdac!important}
+.admin-sidebar .sidebar-label{letter-spacing:2px!important;color:#81a68d!important;font-weight:800!important}
+.admin-sidebar .sidelink{border-radius:5px!important;margin:3px 10px!important;color:#d8e9de!important;font-weight:600!important;transition:background .2s}
+.admin-sidebar .sidelink.active{background:#277348!important;color:#fff!important}.admin-sidebar .sidelink:hover{background:#22503c!important}
+.admin-sidebar .admin-sidefoot{border-top:1px solid rgba(255,255,255,.1)!important;color:#9bb7a5!important}
+.admin-main{background:#f5f8f6!important}.admin-top{height:76px!important;background:#fff!important;border-bottom:1px solid #e4ebe6!important}.admin-content{padding:40px 36px!important;max-width:1680px!important}
+.admin-heading h1{font-size:32px!important;letter-spacing:-.7px!important;color:#123f2e!important}.admin-heading p{color:#7b9082!important}
+.admin-panel,.admin-content .metric,.admin-body .form-panel,.admin-body .settings-card{border-radius:7px!important;background:#fff!important;border:1px solid #e6ede6!important;box-shadow:0 15px 35px rgba(12,48,25,.035)!important}
+.metrics-grid{gap:16px!important}.admin-content .metric{padding:25px!important}.admin-content .metric strong{color:#16583d!important;font-size:30px!important}.admin-content .metric small{color:#7e9283!important}
+.admin-panel{padding:25px!important}.admin-panel .panel-head h3{font-size:15px!important}.admin-table th{background:#f4f9f5!important;color:#63816d!important}.admin-table td{border-bottom:1px solid #ebf1ec!important}.admin-table tr:hover td{background:#fdfefd!important}
+.chart-bar{background:linear-gradient(180deg,#1c9060,#a7dcc0)!important}.admin-body .btn-primary{background:#196543!important;border-radius:4px!important}.admin-body .btn-primary:hover{background:#114e35!important}.admin-body .field :is(input,select,textarea){border-radius:5px!important}
+.admin-body .pill{border-radius:3px!important}.admin-body .donut{box-shadow:0 0 0 11px #f2f8f4!important}.admin-body .avatar{background:#e4f4e7!important;border-radius:6px!important}.admin-body .admin-top-right{gap:13px!important}
+@media(max-width:900px){.admin-content{padding:24px 16px!important}.admin-sidebar{width:260px!important}}
