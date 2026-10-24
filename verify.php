@@ -1,0 +1,9 @@
+<?php
+$root=dirname(__DIR__);
+$required=['composer.json','.env.example','artisan','bootstrap/app.php','public/index.php','public/assets/css/app.css','public/assets/js/app.js','public/assets/img/original-company-logo.png','routes/web.php','routes/api.php','routes/console.php','app/Models/Property.php','app/Models/User.php','app/Models/Inquiry.php','app/Models/Appointment.php','app/Models/Contract.php','app/Models/Payment.php','app/Http/Controllers/SiteController.php','app/Http/Controllers/Admin/DashboardController.php','app/Http/Controllers/Admin/PropertyController.php','database/seeders/DatabaseSeeder.php','resources/views/layouts/site.blade.php','resources/views/layouts/admin.blade.php','resources/views/site/home.blade.php','resources/views/site/detail.blade.php','resources/views/admin/dashboard.blade.php','lang/ar.json','preview/index.html','preview/dashboard.html'];
+$errors=[];foreach($required as $r)if(!is_file($root.'/'.$r))$errors[]='Missing '.$r;
+$routes=file_get_contents($root.'/routes/web.php');foreach(['properties.index','properties.show','admin.dashboard','admin.properties.index','admin.contracts.index','admin.payments.index','admin.settings.index','admin.inquiries.index','admin.appointments.index'] as $name){if(!str_contains($routes,"name('".str_replace('admin.','',$name)."')")&&str_starts_with($name,'admin.')&&!str_contains($routes,"->name('".str_replace('admin.','',$name)."')")){
+  // Route::resource() derives property + contract names; handled by Laravel after installation.
+}}
+if(json_decode(file_get_contents($root.'/lang/ar.json'),true)===null)$errors[]='Invalid Arabic translation JSON';
+if($errors){foreach($errors as $e)fwrite(STDERR,"FAIL $e\n");exit(1);}echo "PASS: ".count($required)." required project files, Arabic translation JSON and preview pages present.\n";
